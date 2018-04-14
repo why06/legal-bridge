@@ -8,12 +8,33 @@
 }
 
 .main-header {
-    background-color: rgb(53, 33, 146);
-    height: 150px;
+    background-color: #0face3;
+    height: 100px;
     padding: 20px;
-    color: white;
+    color:black;
 }
 
 .main-intro{
     font-size: large;
+}
+
+.org-card{
+    margin: 2em;
+    padding: 0.5em;
+    width: 50%;
+    height: 8em;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-shadow: 5px 5px #808080;
+}
+
+.cardbox{
+    display: flex;
+    align-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 40em;
+   overflow-y: scroll;
 }

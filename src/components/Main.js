@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
 import '../css/main.css';
-import logo from '../logo.svg';
 
 var orgs = [
   {title: 'Memphis Area Legal Services', blurb: 'MALS provides free legal assistance on legal in Fayette, Lauderdale, Shelby, Tipton'},
@@ -10,11 +9,20 @@ var orgs = [
 ];
 
 class Main extends Component {
+    renderCards(){
+      var rows = [];
+        orgs.forEach(elem => {
+          rows.push(this.renderOrgCard(elem.title, elem.blurb))
+       });
+       return rows;
+    }
+
     renderOrgCard(headtext, subheadtext){
+      console.log("wee");
       return(
         <div className="org-card">
-          <span>${headtext}</span>
-          <span>${subheadtext}</span>
+          <h4>{headtext}</h4>
+          <p>{subheadtext}</p>
         </div>
       )
     }
@@ -22,18 +30,13 @@ class Main extends Component {
         return(
           <div className="App">
             <header className="main-header">
-              {/* <img src={logo} className="App-logo" alt="logo" /> */}
               <h1 className="App-title">Legal Bridge</h1> 
               <p className="main-intro">
                 An app to connect clients to legal help
               </p>
             </header>
-            <div>
-              {
-                orgs.forEach((elem) =>{
-                  this.renderOrgCard(elem.title, elem.subheadtext);
-                })
-              }
+            <div className="cardbox">
+              { this.renderCards()}
             </div>
           </div>
         )
