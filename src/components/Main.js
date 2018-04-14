@@ -35,8 +35,10 @@ class Main extends Component {
                 An app to connect clients to legal help
               </p>
             </header>
-            <div className="cardbox">
-              { this.renderCards()}
+            <div className="content">
+              <div className="cardbox">
+                { this.renderCards()}
+              </div>
             </div>
           </div>
         )

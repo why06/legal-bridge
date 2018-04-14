@@ -21,7 +21,6 @@
 .org-card{
     margin: 2em;
     padding: 0.5em;
-    width: 50%;
     height: 8em;
     background-color: #ffffff;
     overflow-x: hidden;
@@ -31,10 +30,16 @@
 }
 
 .cardbox{
+    float: right;
     display: flex;
     align-content: flex-end;
     flex-direction: column;
     justify-content: flex-start;
     height: 40em;
-   overflow-y: scroll;
+    overflow-y: scroll;
+    width:50%;
+}
+
+.content{
+    display: block;
 }
